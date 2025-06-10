@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Codificação de Caracteres e Viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título e Descrição -->
+    <title>Powder Gate - Sua plataforma de streaming explosiva!</title>
+    <meta name="description" content="Powder Gate é a sua plataforma de streaming preferida para os melhores filmes e séries de ficção científica, fantasia e suspense.">
+
+    <!-- Palavras e Autor -->
+    <meta name="keywords" content="Powder Gate, streaming, ficção científica, fantasia, suspense, filmes, séries">
+    <meta name="author" content="Ricardo Andreotti Gonçalves">
+
+    <!-- Meta Tags Open Graph para Melhor Compartilhamento em Redes Sociais -->
+    <meta property="og:title" content="Powder Gate - Streaming Explosivo">
+    <meta property="og:description" content="Descubra os melhores filmes e séries de ficção científica, fantasia e suspense na Powder Gate.">
+    <meta property="og:image" content="SiteFotos/938d0418-78b9-4f56-ae07-cd76cf9dc0ee.png">
+    <meta property="og:url" content="https://www.powdergate.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Powder Gate">
+
+    <!-- Folhas de Estilo -->
+    <link rel="stylesheet" href="assets/css/styleMain.css">
+    
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/icon.png" alt="Powder Gate logo">
+
+    <!-- Cor do Tema da Barra para Navegadores Móveis -->
+    <meta name="theme-color" content="#1e1239">
+</head>
+
+<body>
+    <!-- Tela de Carregamento -->
+    <div id="loading-screen" role="alert" aria-live="assertive" aria-busy="true" aria-label="Tela de carregamento">
+        <div class="disappear">
+            <h2><span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span><span>.</span><span>.</span><span>.</span></h2>
+        </div>
+    </div>
+
+    <!-- Componente Spline Viewer -->
+    <spline-viewer url="https://prod.spline.design/GO7yVWP-G8L4NCwG/scene.splinecode" id="spline-viewer" role="img" aria-label="Visualização 3D interativa"></spline-viewer>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav role="navigation" aria-label="Menu principal">
+            <!-- Cubo e Título do Site -->
+            <div class="logo">
+                <a href="index.html" aria-label="Página inicial Powder Gate">
+                    <div class="cube" aria-hidden="true">
+                        <div class="top"></div>
+                        <div>
+                            <span style="--i:0;"></span>
+                            <span style="--i:1;"></span>
+                            <span style="--i:2;"></span>
+                            <span style="--i:3;"></span>
+                        </div>
+                        <div class="bottom"></div>
+                    </div>
+                    <h1>Powder Gate</h1>
+                </a>
+            </div>
+            <!-- Links de Navegação -->
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#" role="menuitem"><i class="fas fa-home" aria-hidden="true"></i>Início</a></li>
+                <li role="none"><a href="#" role="menuitem"><i class="fas fa-fire" aria-hidden="true"></i>Novidades</a></li>
+                <li role="none"><a href="#" role="menuitem"><i class="fas fa-heart" aria-hidden="true"></i>Favoritos</a></li>
+                <li role="none"><a href="#" role="menuitem"><i class="fas fa-thumbs-up" aria-hidden="true"></i>Recomendados</a></li>
+            </ul>
+            <!-- Barra de Pesquisa e Perfil do Usuário -->
+            <div class="header-right">
+                <!-- Barra de Pesquisa -->
+                <div class="search-bar" role="search">
+                    <input type="text" placeholder="Pesquisar..." aria-label="Pesquisar conteúdo">
+                    <button aria-label="Botão de pesquisa"><i class="fas fa-search" alt="Ícone de pesquisa"></i></button>
+                </div>
+                <!-- Menu Hamburguer -->
+                <div class="menu-icon" role="button" tabindex="0" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- Menu de Perfil do Usuário -->
+                <div class="user-profile" role="region" aria-label="Perfil do usuário">
+                    <img src="assets/img/user.jpg" alt="Foto de perfil do usuário logado" tabindex="0">
+                    <div class="user-menu" role="menu" aria-hidden="true" id="menu-principal">
+                        <a href="#" role="menuitem"><i class="fas fa-user" alt="Ícone de usuário"></i> Meu Perfil</a>
+                        <a href="#" role="menuitem"><i class="fas fa-cog" alt="Ícone de configurações"></i> Configurações</a>
+                        <a href="#" role="menuitem"><i class="fas fa-sign-out-alt" alt="Ícone de sair"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Vídeo Destacado -->
+        <section class="featured">
+            <div class="featured-background">
+                <img src="assets/vid/knight-01.webp" alt="Teaser Cavaleiro da Lua">
+            </div>
+            <!-- Conteúdo do Vídeo Destacado -->
+            <div class="featured-content">
+                <div class="featured-text">
+                    <h2>Cavaleiro da Lua</h2>
+                    <p>Uma nova série emocionante chega à Powder;Gate! Acompanhe as aventuras de Marc Spector, um ex-mercenário que se torna o avatar do deus egípcio Khonshu.</p>
+                </div>
+                <div class="featured-info">
+                    <span><i class="fas fa-star"></i> 8.7</span>
+                    <span><i class="fas fa-clock"></i> 45min</span>
+                    <span><i class="fas fa-calendar"></i> 2022</span>
+                </div>
+                <div class="featured-buttons">
+                    <button class="add-btn"><i class="fas fa-plus"></i> Minha lista</button>
+                    <button class="playy-btn"><i class="fas fa-play"></i> Assistir</button>
+                    <button class="info-btn"><i class="fas fa-info-circle"></i> Mais informações</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Recomendações de Vídeos -->
+        <section class="recommendations">
+            <h2>Vídeos Semelhantes</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                
+                <div class="video-carousel">
+                    <div class="video-grid">
+
+                        <!-- Informações do Vídeo 01 -->
+                        <div class="video-item">
+                            <img src="assets/vid/steins.gif" alt="Cena animada de Steins;Gate mostrando personagens principais">
+                            <div class="video-info">
+                                <h3>Steins;Gate</h3>
+                                <p>Um grupo de amigos modifica uma micro-ondas, transformando-a em uma máquina capaz de enviar mensagens para o passado.</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-clock"></i> 24 min</span>
+                                    <span><i class="fas fa-star"></i> 9.1</span>
+                                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Vídeo 02 -->
+                        <div class="video-item">
+                            <img src="assets/vid/witcher-03.gif" alt="Cena de ação de The Witcher com Geralt lutando contra monstros">
+                            <div class="video-info">
+                                <h3>The Witcher</h3>
+                                <p>Geralt de Rivia, um caçador de monstros mutante, luta para encontrar seu lugar em um mundo onde as pessoas frequentemente se provam mais perversas que as bestas.</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-clock"></i> 24 min</span>
+                                    <span><i class="fas fa-star"></i> 9.1</span>
+                                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Vídeo 03 -->
+                        <div class="video-item">
+                            <img src="assets/vid/pathologic-01.gif" alt="Cena atmosférica de Pathologic mostrando a cidade misteriosa">
+                            <div class="video-info">
+                                <h3>Pathologic</h3>
+                                <p>Em uma cidade remota assolada por uma doença misteriosa, três curandeiros lutam contra o tempo para salvar a população.</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-clock"></i> 50 min</span>
+                                    <span><i class="fas fa-star"></i> 8.5</span>
+                                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Vídeo 04 -->
+                        <div class="video-item">
+                            <img src="assets/vid/null.webp" alt="Imagem placeholder para o vídeo Null">
+                            <div class="video-info">
+                                <h3>Null</h3>
+                                <p>Informações sobre o vídeo Null não disponíveis.</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-clock"></i> 24 min</span>
+                                    <span><i class="fas fa-star"></i> 9.1</span>
+                                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Vídeo 05 -->
+                        <div class="video-item">
+                            <img src="assets/vid/hylics-02.gif" alt="Cena surreal de Hylics mostrando personagens e cenário único">
+                            <div class="video-info">
+                                <h3>Hylics</h3>
+                                <p>Uma aventura surreal em um mundo pós-apocalíptico, onde a realidade e o sonho se misturam em uma jornada única.</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-clock"></i> 24 min</span>
+                                    <span><i class="fas fa-star"></i> 9.1</span>
+                                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- Botão de navegação para a direita -->
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Rodapé Principal -->
+    <footer>
+        <div class="footer-content">
+            <!-- Sobre Nós -->
+            <div class="footer-section about">
+                <h3>Powder Gate</h3>
+                <p>Somos uma plataforma de streaming inovadora, dedicada a oferecer o melhor conteúdo de ficção científica, fantasia e suspense. Nossa missão é transportar nossos espectadores para mundos extraordinários através de histórias cativantes e produções de alta qualidade.</p>
+                <div class="contacts">
+                    <span><i class="fas fa-phone" alt="Ícone de telefone"></i> &nbsp; (11) 1234-5678</span>
+                    <span><i class="fas fa-envelope" alt="Ícone de envelope"></i> &nbsp; contato@powdergate.com</span>
+                </div>
+            </div>
+            
+            <!-- Links Rápidos -->
+            <div class="footer-section links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#" class="footer-link">Novidades</a></li>
+                    <li><a href="#" class="footer-link">Sobre nós</a></li>
+                    <li><a href="#" class="footer-link">Catálogo</a></li>
+                    <li><a href="#" class="footer-link">Contato</a></li>
+                    <li><a href="#" class="footer-link">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <!-- Redes Sociais -->
+            <div class="footer-section social">
+                <h3>Conecte-se</h3>
+                <div class="social-media">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook" alt="Ícone do Facebook"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram" alt="Ícone do Instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube" alt="Ícone do YouTube"></i></a>
+                    <a href="#" class="social-icon" aria-label="Discord"><i class="fab fa-discord" alt="Ícone do Discord"></i></a>
+                </div>
+            </div>
+            
+            <!-- Newsletter -->
+            <div class="footer-section newsletter">
+                <h3>Fique por dentro</h3>
+                <p>Assine nossa newsletter para receber novidades e ofertas exclusivas.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Assinar</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Rodapé Inferior -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Powder Gate. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para o carrossel -->
+    <script src="assets/js/caroucel.js"></script>
+    
+    <!-- Script para o menu hambúrguer -->
+    <script src="assets/js/menu.js"></script>
+
+    <!-- Script para o Spline Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.32/build/spline-viewer.js"></script>
+
+    <script>
+        // Remover marca d`água
+        window.onload = function() {
+        var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
+        shadowRoot.querySelector('#logo').remove();
+        }
+        
+        // Constantes
+        const loadingScreen = document.getElementById('loading-screen');
+        const splineViewer = document.getElementById('spline-viewer');
+
+        // Quando o Spline Viewer carregar, mostrar o componente e ocultar a tela de carregamento
+        splineViewer.addEventListener('load', function() {
+            loadingScreen.style.display = 'none';
+        });
+
+        // Garante a remoção do Spline Viewer e Loading Screen após 5 segundos
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+            splineViewer.style.display = 'none';
+        }, 5000);
+
+        // Quando a página terminar de carregar, remover a tela de carregamento
+        // window.addEventListener('load', function() {
+            // loadingScreen.style.display = 'none'; // Oculta a tela de carregamento
+        // });
+    </script>
+</body>
+</html>
