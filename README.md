@@ -10,8 +10,7 @@
 </p>
 
 <div align="center">
-  <!-- Placeholder para imagem de destaque do projeto -->
-  <!-- <img src="./path/to/your/image.png" alt="Captura de tela do Powder Gate">
+  <img src="./path/to/your/image.png" alt="Captura de tela do Powder Gate">
 </div>
 
 ## 📋 Sobre o Projeto
