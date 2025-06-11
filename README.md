@@ -1,12 +1,12 @@
 <!-- Projeto Finalizado -->
-# 🎬 Powder Gate - Sua Plataforma de Streaming Explosiva!
+# 🎬 Powder Gate - Plataforma de Streaming Explosiva!
 <p align="center">
   <!-- Contador de linguagens do GitHub -->
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/seuUsuario/PowderGate?color=FFF&labelColor=8A2BE2&style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/devAndreotti/powder-gate?color=FFF&labelColor=8A2BE2&style=flat-square">
   <!-- Tamanho do repositório no GitHub -->
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/seuUsuario/PowderGate?color=FFF&labelColor=8A2BE2&style=flat-square">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/devAndreotti/powder-gate?color=FFF&labelColor=8A2BE2&style=flat-square">
   <!-- Licença do GitHub -->
-  <img alt="GitHub License" src="https://img.shields.io/github/license/seuUsuario/PowderGate?color=FFF&labelColor=8A2BE2&style=flat-square">
+  <img alt="GitHub License" src="https://img.shields.io/github/license/devAndreotti/devAndreotti?color=FFF&labelColor=8A2BE2&style=flat-square">
 </p>
 
 <div align="center">
@@ -31,19 +31,6 @@ O Powder Gate é uma plataforma de streaming inovadora, dedicada a oferecer o me
 - **Font Awesome**: Biblioteca de ícones para uma interface mais rica.
 - **Spline Viewer**: Para a visualização 3D interativa no fundo da página.
 
-## 🚀 Melhorias de Responsividade Implementadas
-Durante o desenvolvimento, foram realizadas diversas melhorias para garantir a melhor experiência em qualquer dispositivo:
-
-### Cabeçalho
-- **Menu Hambúrguer**: Implementado para navegação eficiente em dispositivos móveis e tablets.
-- **Barra de Pesquisa**: Ajustes de tamanho e comportamento para se adaptar a telas menores, evitando quebras de layout.
-- **Elementos Adaptativos**: Otimização de fontes e espaçamentos para garantir legibilidade e organização em todas as resoluções.
-
-### Carrossel de Recomendações
-- **Layout Flexível**: Refatorado para exibir vídeos de forma otimizada em mobile, tablet e desktop.
-- **Navegação por Toque (Swipe)**: Adicionada funcionalidade de arrastar para navegar no carrossel em dispositivos touch.
-- **Dimensionamento Dinâmico**: Os cards de vídeo se ajustam automaticamente ao tamanho da tela, mantendo a proporção e a qualidade visual.
-
 ## 🌐 Visualize o Projeto
 Você pode visualizar o projeto localmente seguindo as instruções abaixo.
 
@@ -57,33 +44,10 @@ Powder Gate/
 │   │   ├── Montserrat-VariableFont_wght.ttf
 │   │   └── Poppins-Regular.ttf
 │   ├── img/
-│   │   ├── blur.jpg
-│   │   ├── clean-01.jpg
-│   │   ├── clean-02.png
-│   │   ├── cube.jpg
-│   │   ├── icon.png
-│   │   ├── metal.jpg
-│   │   ├── neon.jpg
-│   │   ├── space.jpg
-│   │   └── user.jpg
 │   ├── js/
 │   │   ├── caroucel.js
 │   │   └── menu.js
 │   └── vid/
-│       ├── cube.gif
-│       ├── elysium-01.gif
-│       ├── elysium-02.gif
-│       ├── hylics-01.gif
-│       ├── hylics-02.gif
-│       ├── knight-01.webp
-│       ├── knight-02.webp
-│       ├── null.webp
-│       ├── pathologic-01.gif
-│       ├── space.gif
-│       ├── steins.gif
-│       ├── witcher-01.gif
-│       ├── witcher-02.gif
-│       └── witcher-03.gif
 └── index.html
 ```
 
@@ -109,14 +73,12 @@ Contribuições são sempre bem-vindas! Se você deseja colaborar com o projeto,
 5. Abra um Pull Request detalhando suas alterações.
 
 ## 📝 Nota
-Este projeto foi desenvolvido com foco em responsividade e experiência do usuário, utilizando as melhores práticas de desenvolvimento web.
+Este projeto foi desenvolvido com foco em responsividade e experiência do usuário, utilizando boas práticas de desenvolvimento web.
 
 <br>
 
 ---
 
 <p align="center">
-  Desenvolvido por [Seu Nome/Nome da Equipe] 🧑‍💻
+  Desenvolvido com ☕ por <a href="https://github.com/seuUsuario">Ricardo Andreotti Gonçalves</a> 🧑‍💻
 </p>
-
----
