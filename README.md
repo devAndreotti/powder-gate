@@ -2,15 +2,15 @@
 # 🎬 Powder Gate - Plataforma de Streaming Explosiva!
 <p align="center">
   <!-- Contador de linguagens do GitHub -->
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/devAndreotti/powder-gate?color=FFF&labelColor=8A2BE2&style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/devAndreotti/powder-gate?color=FFF&labelColor=3b2f4b&style=flat-square">
   <!-- Tamanho do repositório no GitHub -->
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/devAndreotti/powder-gate?color=FFF&labelColor=8A2BE2&style=flat-square">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/devAndreotti/powder-gate?color=FFF&labelColor=3b2f4b&style=flat-square">
   <!-- Licença do GitHub -->
-  <img alt="GitHub License" src="https://img.shields.io/github/license/devAndreotti/devAndreotti?color=FFF&labelColor=8A2BE2&style=flat-square">
+  <img alt="GitHub License" src="https://img.shields.io/github/license/devAndreotti/devAndreotti?color=FFF&labelColor=3b2f4b&style=flat-square">
 </p>
 
 <div align="center">
-  <img src="./path/to/your/image.png" alt="Captura de tela do Powder Gate">
+  <img src="./assets/img/project-01.png" alt="Captura de tela do Powder Gate">
 </div>
 
 ## 📋 Sobre o Projeto
