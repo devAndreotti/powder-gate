@@ -23,13 +23,16 @@
     <meta property="og:site_name" content="Powder Gate">
 
     <!-- Folhas de Estilo -->
-    <link rel="stylesheet" href="assets/css/styleMain.css">
+    <link rel="preload" href="assets/css/styleMain.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/styleMain.css"></noscript>
     
     <!-- Ícones Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/icon.png" alt="Powder Gate logo">
+    <link rel="icon" href="assets/img/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/img/icon.png">
 
     <!-- Cor do Tema da Barra para Navegadores Móveis -->
     <meta name="theme-color" content="#1e1239">
@@ -80,10 +83,12 @@
                     <button aria-label="Botão de pesquisa"><i class="fas fa-search" alt="Ícone de pesquisa"></i></button>
                 </div>
                 <!-- Menu Hamburguer -->
+                <div class="menu">
                 <div class="menu-icon" role="button" tabindex="0" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
                     <span></span>
                     <span></span>
                     <span></span>
+                </div>
                 </div>
                 <!-- Menu de Perfil do Usuário -->
                 <div class="user-profile" role="region" aria-label="Perfil do usuário">
@@ -293,7 +298,7 @@
         setTimeout(() => {
             loadingScreen.style.display = 'none';
             splineViewer.style.display = 'none';
-        }, 5000);
+        }, 6000);
 
         // Quando a página terminar de carregar, remover a tela de carregamento
         // window.addEventListener('load', function() {

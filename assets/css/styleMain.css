@@ -213,6 +213,19 @@ a {
    Menu Hamburguer
    =================== */
 
+.menu {
+    padding: 0.6rem 0.8rem;
+    background: var(--nav-links-background);
+    border-radius: 20px;
+    display: none;
+    box-shadow: 0 4px 6px var(--nav--links-shadow);
+    transition: all 0.3s ease;
+}
+
+.menu:hover {
+    background: var(--nav-links-hover-background);
+}
+
 .menu-icon {
     position: relative;
     cursor: pointer;
@@ -235,6 +248,10 @@ a {
     left: 0;
 }
 
+.menu:hover .menu-icon span {
+    background: var(--nav-links-hover-text);
+}
+
 .menu-icon span:nth-child(1) {
     top: 0px;
 }
@@ -248,7 +265,7 @@ a {
 }
 
 .menu-icon:hover span {
-    background-color: var(--navbar-hover-color);
+    background-color: var(--navbar-link-hover-color);
 }
 
 .menu-icon.open span:nth-child(1),
@@ -270,6 +287,10 @@ a {
 
 /* Mostrar menu hambúrguer em telas menores */
 @media screen and (max-width: 960px) {
+    .menu {
+        display: block;
+    }
+
     .menu-icon {
         display: block;
     }
@@ -288,6 +309,7 @@ a {
         padding-top: 2rem;
         transition: left 0.3s ease;
         z-index: 9999;
+        gap: 0;
     }
     
     .nav-links.active {
@@ -305,6 +327,11 @@ a {
         padding: 1rem;
         font-size: 1.2rem;
     }
+
+    .nav-links a i {
+        padding-right: 8px;
+        font-size: 1.3rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -315,6 +342,16 @@ a {
     
     .nav-links li {
         width: 90%;
+        margin: 0.8rem 0;
+    }
+
+    .nav-links a {
+        padding: 0.8rem;
+        font-size: 1.1rem;
+    }
+
+    .nav-links a i {
+        font-size: 1.2rem;
     }
 }
 
@@ -547,12 +584,12 @@ nav {
     }
     
     .search-bar {
-        max-width: 100px;
+        max-width: 120px; /* Aumentado de 100px para 120px */
     }
     
     .search-bar:hover input,
     .search-bar input:focus {
-        width: 100px;
+        width: 80px; /* Reduzido de 100px para 80px para caber melhor */
     }
     
     .user-profile img {
@@ -561,23 +598,107 @@ nav {
     }
 }
 
-@media screen and (max-width: 480px) {
+/* Adicionar media query para telas muito pequenas */
+@media screen and (max-width: 360px) {
+    .logo h1 {
+        display: none;
+    }
+
+    .logo a {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .cube {
+        margin-right: 0;
+        height: 18px;
+        width: 18px;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-links a i {
+        font-size: 1rem;
+        padding-right: 4px;
+    }
+
     .search-bar {
         max-width: 80px;
+        padding: 4px 8px;
+    }
+
+    .search-bar:hover input,
+    .search-bar input:focus {
+        width: 50px;
+    }
+
+    .search-bar input {
+        font-size: 0.7rem;
+        padding: 2px;
+    }
+
+    .search-bar button {
+        font-size: 0.8rem;
+        padding: 2px;
+    }
+
+    .user-profile img {
+        height: 25px;
+        width: 25px;
+    }
+
+    .header-right {
+        gap: 0.3rem;
+    }
+
+    nav {
+        max-width: 95%;
+        padding: 0 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-bar {
+        max-width: 100px; /* Aumentado de 80px para 100px */
+        padding: 6px 10px; /* Reduzido o padding */
     }
     
     .search-bar:hover input,
     .search-bar input:focus {
-        width: 80px;
+        width: 60px; /* Reduzido de 80px para 60px */
     }
     
     .search-bar input {
-        font-size: 0.7rem;
+        font-size: 0.8rem; /* Aumentado de 0.7rem para 0.8rem */
+        padding: 3px; /* Reduzido o padding interno */
+    }
+    
+    .search-bar button {
+        font-size: 1rem; /* Reduzido de 1.2rem para 1rem */
+        padding: 3px; /* Reduzido o padding do botão */
     }
     
     .user-profile img {
         height: 30px;
         width: 30px;
+    }
+
+    .nav-links a {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+    }
+
+    .nav-links a i {
+        font-size: 1.1rem;
+        padding-right: 6px;
     }
 }
 
@@ -681,6 +802,7 @@ nav {
     padding: 8px 15px;
     overflow: hidden;
     display: flex;
+    max-width: 300px; /* Limita a largura máxima */
 }
 
 .search-bar::before {
@@ -711,12 +833,13 @@ nav {
     font-size: 1rem;
     padding: 5px;
     width: 0;
+    min-width: 0; /* Permite que o input seja completamente colapsado */
 }
 
 .search-bar:hover input,
 .search-bar input:focus {
     outline: none;
-    width: 250px;
+    width: 200px; /* Reduzido de 250px para 200px */
 }
 
 .search-bar button {
@@ -726,6 +849,7 @@ nav {
     font-size: 1.2rem;
     cursor: pointer;
     padding: 5px;
+    flex-shrink: 0; /* Impede que o botão seja comprimido */
 }
 
 .search-bar button:hover {
@@ -769,6 +893,17 @@ nav {
 
 .user-profile img:not(:hover) {
     animation: coinFlipReverse 0.6s linear;
+}
+
+@media screen and (max-width: 530px) {
+    .search-bar:hover input,
+    .search-bar input:focus {
+        outline: none;
+        width: 95px; /* Reduzido de 250px para 200px */
+}
+    nav {
+        max-width: 93%;;
+    }
 }
 
 /* User Drop */
@@ -854,7 +989,7 @@ nav {
 
 .featured {
     position: relative;
-    height: 70vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -887,16 +1022,75 @@ nav {
     transition: all 1s ease;
 }
 
-@media screen and (max-width: 1300px) {
-    .featured {
-        height: 80vh;
+@media screen and (max-width: 768px) {
+
+    .featured-background img {
+        filter: blur(3px) brightness(0.8);
+        transform: scale(1.2) translateZ(-30px);
+    }
+
+    .featured:hover .featured-background img {
+        filter: blur(6px) brightness(0.85);
+        transform: scale(1.1) translateZ(-20px);
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     .featured {
-        height: 80vh;
+        height: 100vh;
     }
+
+    .featured-background img {
+        filter: blur(2px) brightness(0.85);
+        transform: scale(1.1) translateZ(-20px);
+    }
+
+    .featured:hover .featured-background img {
+        filter: blur(4px) brightness(0.9);
+        transform: scale(1.05) translateZ(-10px);
+    }
+}
+
+/* ===================
+   Home Card
+   =================== */
+
+.featured {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.featured-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform-style: preserve-3d;
+}
+
+.featured-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px) brightness(0.7);
+    transform: scale(1.3) translateZ(-50px);
+    transition: all 2s ease;
+}
+
+.featured:hover .featured-background img {
+    filter: blur(8px) brightness(0.8);
+    transform: scale(1.05) translateZ(-30px);
+    transition: all 1s ease;
+}
+
+@media screen and (max-width: 768px) {
 
     .featured-background img {
         filter: blur(3px) brightness(0.8);
@@ -1086,7 +1280,17 @@ nav {
     transform: scale(0.95);
 }
 
+@media screen and (max-width: 1400px) {
+    .featured-content {
+        padding: 2rem;
+        max-width: 90%;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .featured-info {
+        justify-content: center;
+    }
     .featured-content {
         padding: 2rem;
         max-width: 80%;
@@ -1202,7 +1406,7 @@ nav {
 }
 
 .video-item:hover {
-    box-shadow: 0 15px 30px rgba(215, 150, 223, 0.5);
+    box-shadow: 0 15px 10px rgba(215, 150, 223, 0.5);
     transform: translateY(-5px);
 }
 
@@ -1647,13 +1851,15 @@ footer::before {
     margin-bottom: 0.8rem;
     color: var(--text-color);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    text-align: justify;
+    text-align: left; /* Mudado de justify para left */
     font-size: clamp(0.9rem, 2vw, 1rem);
+    word-wrap: break-word; /* Quebra palavras longas */
 }
 
 .contacts i {
     margin-right: 0.5rem;
     color: #d796df;
+    flex-shrink: 0; /* Impede compressão do ícone */
 }
 
 /* ===================
@@ -1776,6 +1982,7 @@ footer::before {
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 0; /* Remove gap para melhor alinhamento */
 }
 
 .footer-section.newsletter .newsletter-form input[type="email"] {
@@ -1786,15 +1993,18 @@ footer::before {
     color: var(--text-color);
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     transition: all 0.3s ease;
+    border-radius: 20px 0 0 20px; /* Arredonda apenas o lado esquerdo */
+    min-width: 200px; /* Largura mínima */
 }
 
 .footer-section.newsletter .newsletter-form input[type="email"]::placeholder {
-    color: var(--text-color);
+    color: rgba(216, 216, 216, 0.7); /* Mais sutil */
 }
 
 .footer-section.newsletter .newsletter-form input[type="email"]:focus {
     background-color: rgba(255, 255, 255, 0.2);
     outline: none;
+    box-shadow: 0 0 0 2px rgba(215, 150, 223, 0.5); /* Destaque de foco */
 }
 
 .footer-section.newsletter .newsletter-form button {
@@ -1811,6 +2021,9 @@ footer::before {
     letter-spacing: 1px;
     position: relative;
     overflow: hidden;
+    border-radius: 0 20px 20px 0; /* Arredonda apenas o lado direito */
+    min-height: 44px; /* Tamanho mínimo para touch */
+    white-space: nowrap; /* Evita quebra de texto */
 }
 
 .footer-section.newsletter .newsletter-form button::before {
@@ -1828,6 +2041,7 @@ footer::before {
 
 .footer-section.newsletter .newsletter-form button:hover {
     background-color: rgb(52, 34, 96);
+    transform: translateY(-2px); /* Efeito de elevação */
 }
 
 .footer-section.newsletter .newsletter-form button:hover::before {
@@ -1836,7 +2050,7 @@ footer::before {
 }
 
 .footer-section.newsletter .newsletter-form button:active {
-    transform: scale(1.1);
+    transform: scale(0.98) translateY(0); /* Efeito de clique */
 }
 
 /* ===================
@@ -1945,3 +2159,222 @@ footer::before {
         font-size: 1.2rem;
     }
 }
+/* ===================
+   Footer Media Queries
+=================== */
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 2rem 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 90%;
+    }
+
+    .footer-section {
+        flex: 1 1 auto;
+        min-width: auto;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-section h3 {
+        font-size: clamp(1.3rem, 4vw, 1.6rem);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .footer-section p {
+        text-align: left; /* Melhor para telas menores */
+        font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+
+    .footer-section.social .social-media {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        max-width: 100%;
+    }
+
+    .footer-section.social .social-media a {
+        width: clamp(45px, 8vw, 60px);
+        height: clamp(45px, 8vw, 60px);
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+    }
+
+    .footer-section.newsletter .newsletter-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer-section.newsletter .newsletter-form input[type="email"] {
+        border-radius: 20px;
+        width: 100%;
+        min-width: auto;
+    }
+
+    .footer-section.newsletter .newsletter-form button {
+        border-radius: 20px;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .contacts span {
+        font-size: clamp(0.8rem, 3vw, 0.95rem);
+        margin-bottom: 0.6rem;
+    }
+
+    .footer-section.links a {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        padding-left: 1.5rem;
+    }
+
+    .footer-bottom {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        width: 95%;
+    }
+
+    .footer-bottom p {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer-content {
+        width: 95%;
+        gap: 1rem;
+    }
+
+    .footer-section {
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    .footer-section h3 {
+        font-size: clamp(1.1rem, 5vw, 1.4rem);
+        margin-bottom: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .footer-section p {
+        font-size: clamp(0.8rem, 4vw, 0.95rem);
+        line-height: 1.6;
+    }
+
+    .footer-section.social .social-media {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .footer-section.social .social-media a {
+        width: clamp(40px, 10vw, 55px);
+        height: clamp(40px, 10vw, 55px);
+        font-size: clamp(1rem, 5vw, 1.5rem);
+    }
+
+    .footer-section.newsletter .newsletter-form input[type="email"] {
+        padding: 0.8rem 1rem;
+        font-size: clamp(0.8rem, 4vw, 1rem);
+    }
+
+    .footer-section.newsletter .newsletter-form button {
+        padding: 0.8rem;
+        font-size: clamp(0.8rem, 4vw, 1rem);
+        min-height: 40px;
+    }
+
+    .contacts span {
+        font-size: clamp(0.7rem, 4vw, 0.9rem);
+    }
+
+    .footer-section.links a {
+        font-size: clamp(0.8rem, 4vw, 1rem);
+        padding-left: 1rem;
+    }
+
+    .footer-bottom {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .footer-bottom p {
+        font-size: clamp(0.7rem, 4vw, 0.9rem);
+    }
+}
+
+/* Nova media query para telas muito pequenas */
+@media screen and (max-width: 360px) {
+    footer {
+        padding: 1rem 0;
+    }
+
+    .footer-content {
+        width: 98%;
+        gap: 0.8rem;
+    }
+
+    .footer-section {
+        padding: 0.8rem;
+        border-radius: 12px;
+    }
+
+    .footer-section h3 {
+        font-size: clamp(1rem, 6vw, 1.2rem);
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-section p {
+        font-size: clamp(0.7rem, 5vw, 0.85rem);
+        line-height: 1.5;
+    }
+
+    .footer-section.social .social-media {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+    }
+
+    .footer-section.social .social-media a {
+        width: clamp(35px, 12vw, 50px);
+        height: clamp(35px, 12vw, 50px);
+        font-size: clamp(0.9rem, 6vw, 1.3rem);
+    }
+
+    .footer-section.newsletter .newsletter-form input[type="email"] {
+        padding: 0.6rem 0.8rem;
+        font-size: clamp(0.7rem, 5vw, 0.9rem);
+    }
+
+    .footer-section.newsletter .newsletter-form button {
+        padding: 0.6rem;
+        font-size: clamp(0.7rem, 5vw, 0.9rem);
+        min-height: 36px;
+    }
+
+    .contacts span {
+        font-size: clamp(0.6rem, 5vw, 0.8rem);
+        margin-bottom: 0.4rem;
+    }
+
+    .footer-section.links a {
+        font-size: clamp(0.7rem, 5vw, 0.9rem);
+        padding-left: 0.8rem;
+    }
+
+    .footer-bottom {
+        margin-top: 1rem;
+        padding-top: 0.8rem;
+    }
+
+    .footer-bottom p {
+        font-size: clamp(0.6rem, 5vw, 0.8rem);
+    }
+}
+
