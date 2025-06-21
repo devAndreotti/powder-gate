@@ -776,7 +776,8 @@ nav {
 /* Esconder nav-links em telas menores quando o menu hambúrguer está ativo */
 @media screen and (max-width: 1250px) {
     .nav-links li a {
-        font-size: 1.1rem;
+        transition: 0s;
+        font-size: 0;
     }
 
     .nav-links li a i {
