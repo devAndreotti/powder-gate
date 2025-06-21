@@ -10,7 +10,7 @@
 </p>
 
 <div align="center">
-  <img src="./assets/img/project-01.png" alt="Captura de tela do Powder Gate">
+  <img src="./project-01.png" alt="Captura de tela do Powder Gate">
 </div>
 
 ## 📋 Sobre o Projeto
