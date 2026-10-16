@@ -2215,6 +2215,7 @@ footer::before {
     }
 
     .footer-section.newsletter .newsletter-form input[type="email"] {
+        flex: 0 0 auto;
         border-radius: 20px;
         width: 100%;
         min-width: auto;
