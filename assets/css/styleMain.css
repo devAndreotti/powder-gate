@@ -1012,7 +1012,7 @@ nav {
     transform-style: preserve-3d;
 }
 
-.featured-background img {
+.featured-background :is(img, video) {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1021,7 +1021,7 @@ nav {
     transition: all 2s ease;
 }
 
-.featured:hover .featured-background img {
+.featured:hover .featured-background :is(img, video) {
     filter: blur(8px) brightness(0.8);
     transform: scale(1.05) translateZ(-30px);
     transition: all 1s ease;
@@ -1029,12 +1029,12 @@ nav {
 
 @media screen and (max-width: 768px) {
 
-    .featured-background img {
+    .featured-background :is(img, video) {
         filter: blur(3px) brightness(0.8);
         transform: scale(1.2) translateZ(-30px);
     }
 
-    .featured:hover .featured-background img {
+    .featured:hover .featured-background :is(img, video) {
         filter: blur(6px) brightness(0.85);
         transform: scale(1.1) translateZ(-20px);
     }
@@ -1045,12 +1045,12 @@ nav {
         height: 100vh;
     }
 
-    .featured-background img {
+    .featured-background :is(img, video) {
         filter: blur(2px) brightness(0.85);
         transform: scale(1.1) translateZ(-20px);
     }
 
-    .featured:hover .featured-background img {
+    .featured:hover .featured-background :is(img, video) {
         filter: blur(4px) brightness(0.9);
         transform: scale(1.05) translateZ(-10px);
     }
@@ -1080,7 +1080,7 @@ nav {
     transform-style: preserve-3d;
 }
 
-.featured-background img {
+.featured-background :is(img, video) {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1089,7 +1089,7 @@ nav {
     transition: all 2s ease;
 }
 
-.featured:hover .featured-background img {
+.featured:hover .featured-background :is(img, video) {
     filter: blur(8px) brightness(0.8);
     transform: scale(1.05) translateZ(-30px);
     transition: all 1s ease;
@@ -1097,12 +1097,12 @@ nav {
 
 @media screen and (max-width: 768px) {
 
-    .featured-background img {
+    .featured-background :is(img, video) {
         filter: blur(3px) brightness(0.8);
         transform: scale(1.2) translateZ(-30px);
     }
 
-    .featured:hover .featured-background img {
+    .featured:hover .featured-background :is(img, video) {
         filter: blur(6px) brightness(0.85);
         transform: scale(1.1) translateZ(-20px);
     }
@@ -1113,12 +1113,12 @@ nav {
         height: 100vh;
     }
 
-    .featured-background img {
+    .featured-background :is(img, video) {
         filter: blur(2px) brightness(0.85);
         transform: scale(1.1) translateZ(-20px);
     }
 
-    .featured:hover .featured-background img {
+    .featured:hover .featured-background :is(img, video) {
         filter: blur(4px) brightness(0.9);
         transform: scale(1.05) translateZ(-10px);
     }
@@ -1429,14 +1429,14 @@ nav {
 }
 
 /* Video Item Image */
-.video-item img {
+.video-item :is(img, video) {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.4s ease;
 }
 
-.video-item:hover img {
+.video-item:hover :is(img, video) {
     filter: brightness(0.85) saturate(1.2) contrast(1.1);
     transform: scale(1.05);
 }
